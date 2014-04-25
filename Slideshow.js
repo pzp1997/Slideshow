@@ -1,10 +1,11 @@
-var slides = ["http://i.imgur.com/GJkGuhT.jpg", "http://i.imgur.com/HkeuWWc.jpg", "http://i.imgur.com/WHn6tz0.jpg", "http://i.imgur.com/gs2Gkok.jpg", "http://i.imgur.com/EsKPmSt.jpg"];
-var delay = 3000;
-var transitionTime = 600;
-var automatic = true;
-var buttons = true;
-var arrowKeys = true;
+var slides = ["http://i.imgur.com/GJkGuhT.jpg", "http://i.imgur.com/HkeuWWc.jpg", "http://i.imgur.com/WHn6tz0.jpg", "http://i.imgur.com/gs2Gkok.jpg", "http://i.imgur.com/EsKPmSt.jpg"]; //Give direct links to your photos b/w "" and seperated by commas.
+var delay = 3000; //Time that each photo will display for in milliseconds.
+var transitionTime = 600; //Duration of the cross-fade transition in milliseconds.
+var automatic = true; //toggle automatic update
+var buttons = true; //toggle the previous/next buttons
+var arrowKeys = true; //toggle the left/right arrow keys for previous/next
 
+//Do not change anything else!
 var $slider = $("#slider");
 var $transition = $("#transition");
 var displaySlider = true;
