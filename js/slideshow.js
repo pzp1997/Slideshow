@@ -1,3 +1,7 @@
+var slides = [];
+for (var i = 1; i < 6; i++) {
+  slides.push("/imgs/" + i + ".jpg");
+}
 var delay = 3000; //Time that each photo will display for in milliseconds.
 var transitionTime = 600; //Duration of the cross-fade transition in milliseconds.
 var automatic = true; //toggle automatic update
@@ -13,13 +17,13 @@ var counter, timer;
 function update() {
   if (displaySlider) {
     $slider.css({
-      "background-image": "url(/imgs/" + (counter + 1) + ".jpg)"
+      "background-image": "url" + slides[counter] + ")"
     });
     $transition.fadeOut(transitionTime);
     $slider.fadeIn(transitionTime);
   } else {
     $transition.css({
-      "background-image": "url(/imgs/" + (counter + 1) + ".jpg)"
+      "background-image": "url" + slides[counter] + ")"
     });
     $slider.fadeOut(transitionTime);
     $transition.fadeIn(transitionTime);
@@ -51,7 +55,7 @@ jQuery.noConflict();
   counter = slides.length < 2 ? 0 : 1;
 
   $transition.css({
-    "background-image": "url(/imgs/1.jpg)"
+    "background-image": "url(" + slides[0] + ")"
   }).show();
 
   if (automatic) {
