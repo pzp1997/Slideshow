@@ -46,7 +46,8 @@ function previous() {
   manualUpdate();
 }
 
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   counter = slides.length < 2 ? 0 : 1;
 
   $transition.css({
@@ -81,4 +82,4 @@ $(document).ready(function() {
       }
     });
   }
-});
+})(jQuery);
