@@ -17,13 +17,13 @@ var counter, timer;
 function update() {
   if (displaySlider) {
     $slider.css({
-      "background-image": "url" + slides[counter] + ")"
+      "background-image": "url(" + slides[counter] + ")"
     });
     $transition.fadeOut(transitionTime);
     $slider.fadeIn(transitionTime);
   } else {
     $transition.css({
-      "background-image": "url" + slides[counter] + ")"
+      "background-image": "url(" + slides[counter] + ")"
     });
     $slider.fadeOut(transitionTime);
     $transition.fadeIn(transitionTime);
