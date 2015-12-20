@@ -5,7 +5,7 @@ var automatic = true; //toggle automatic update
 var buttons = true; //toggle the previous/next buttons
 var arrowKeys = true; //toggle the left/right arrow keys for previous/next
 
-//Do not change anything else!
+// Do not change anything else!
 var $slider = $("#slider");
 var $transition = $("#transition");
 var displaySlider = true;
@@ -27,8 +27,7 @@ function update() {
   }
 
   displaySlider = !displaySlider;
-  counter++;
-  counter = counter % slides.length;
+  counter = (counter + 1) % slides.length;
 }
 
 function manualUpdate() {
@@ -39,11 +38,7 @@ function manualUpdate() {
 
 function previous() {
   if (counter === 0) {
-    if (slides.length < 2) {
-      counter = 0;
-    } else {
-      counter = slides.length - 2;
-    }
+    counter = slides.length < 2 ? 0 : slides.length - 2;
   } else if (counter === 1) {
     counter = slides.length - 1;
   } else {
@@ -53,11 +48,8 @@ function previous() {
 }
 
 $(document).ready(function() {
-  if (slides.length < 2) {
-    counter = 0;
-  } else {
-    counter = 1;
-  }
+  counter = slides.length < 2 ? 0 : 1;
+
   $transition.css({
     "background-image": "url(" + String(slides[0]) + ")"
   }).show();
