@@ -1,6 +1,6 @@
 var slides = [];
 for (var i = 1; i < 6; i++) {
-  slides.push("/imgs/" + i + ".jpg");
+  slides.push("/Slideshow/imgs/" + i + ".jpg");
 }
 var delay = 3000; //Time that each photo will display for in milliseconds.
 var transitionTime = 600; //Duration of the cross-fade transition in milliseconds.
